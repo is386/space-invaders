@@ -1,0 +1,36 @@
+    enemy_shoot = random.randint(0, 9)
+        if enemy_shoot == 1:
+            lasersound.play()
+            enemylaserX = enemyX[1]
+            enemylaserY = enemyY[1] + 5
+            while enemylaserY < 570:
+                pygame.event.pump()
+                keys = pygame.key.get_pressed()
+                if keys[pygame.K_LEFT]:
+                    if spaceX > 0:
+                        spaceX = spaceX - 0.7
+                if keys[pygame.K_RIGHT]:
+                    if spaceX < 515:
+                        spaceX = spaceX + 0.7
+                if keys[pygame.K_ESCAPE]:
+                    cursorY = 275
+                    pygame.mixer.music.pause()
+                    pause_sound.play()
+                    sleep(.2)
+                    pause(cursorY, cursor_pauseX)
+                enemylaserY = enemylaserY + 1
+                screen.blit(background, (0, 0))
+                screen.blit(enemylaser, (enemylaserX, enemylaserY))
+                screen.blit(spaceship, (spaceX, spaceY))
+                screen.blit(enemies[0], (enemyX[0], enemyY[0]))
+                screen.blit(enemies[1], (enemyX[1], enemyY[1]))
+                screen.blit(enemies[2], (enemyX[2], enemyY[2]))
+                screen.blit(enemies[3], (enemyX[3], enemyY[3]))
+                screen.blit(enemies[4], (enemyX[4], enemyY[4]))
+                screen.blit(enemies[5], (enemyX[5], enemyY[5]))
+                screen.blit(enemies[6], (enemyX[6], enemyY[6]))
+                screen.blit(enemies[7], (enemyX[7], enemyY[7]))
+                screen.blit(enemies[8], (enemyX[8], enemyY[8]))
+                screen.blit(enemies[9], (enemyX[9], enemyY[9]))
+                screen.blit(scoretext, (10, 10))
+                pygame.display.flip()
