@@ -1,6 +1,6 @@
 # space-jam
 
-A retro-style space shooter built with Python and Pygame. I made this in highschool and is the first real projectg I ever coded.
+A retro-style space shooter built with Python and Pygame. I made this in highschool and is the first real project I ever coded.
 
 <p>
   <img src="docs/menu.png" alt="Main Menu" width="49%">
